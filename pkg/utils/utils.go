@@ -16,6 +16,15 @@ func MustParseInt64(in string) int64 {
 	return val
 }
 
+func MustParseInt(in string) int {
+	val, err := strconv.Atoi(in)
+	if err != nil {
+		panic(err)
+	}
+
+	return val
+}
+
 func ConvertSlice[T any, K any](in []T, converter func(T) K) []K {
 	out := make([]K, len(in))
 
