@@ -25,6 +25,10 @@ func MustParseInt(in string) int {
 	return val
 }
 
+func FormatInt64(in int64) string {
+	return strconv.FormatInt(in, 10)
+}
+
 func ConvertSlice[T any, K any](in []T, converter func(T) K) []K {
 	out := make([]K, len(in))
 
