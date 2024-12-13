@@ -25,6 +25,15 @@ func MustParseInt(in string) int {
 	return val
 }
 
+func MustParseFloat64(in string) float64 {
+	val, err := strconv.ParseFloat(in, 64)
+	if err != nil {
+		panic(err)
+	}
+
+	return val
+}
+
 func FormatInt64(in int64) string {
 	return strconv.FormatInt(in, 10)
 }
