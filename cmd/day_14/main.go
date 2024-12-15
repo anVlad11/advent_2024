@@ -146,7 +146,7 @@ func part2(lines []string, maxX int, maxY int) error {
 			fmt.Printf("%s\n", strings.Join(res, ""))
 
 		*/
-		filename := fmt.Sprintf("pkg/data/outputs/day_14/step_%d.png", i)
+		filename := fmt.Sprintf("pkg/data/outputs/day_14/png/step_%d.png", i)
 		file, err := os.Create(filename)
 		if err != nil {
 			return err
